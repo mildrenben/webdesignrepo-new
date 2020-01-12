@@ -22,43 +22,21 @@ collections:
           name: "category",
           widget: "relation",
           collection: "category",
-          valueField: "title",
-          searchFields: "title",
-        }
-      - {
-          label: "Subcategory",
-          name: "subcategory",
-          widget: "relation",
-          collection: "subcategory",
-          valueField: "title",
-          searchFields: "title",
+          valueField: "subcategory",
+          searchFields: ["title", "subcategory"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Added date", name: "date", widget: "datetime" }
       - { label: "Paid", name: "paid", widget: "boolean" }
 
-  - name: "subcategory"
-    label: "Subcategory"
-    folder: "src/data/subcategories"
-    create: true
-    fields:
-      - {
-          label: "Category",
-          name: "category",
-          widget: "relation",
-          collection: "category",
-          valueField: "title",
-          searchFields: "title",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-
   - name: "category"
     label: "Category"
     folder: "src/data/categories"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Parent", name: "title", widget: "string" }
+      - { label: "Subcategory", name: "subcategory", widget: "string" }
 
   - name: "blog"
     label: "Blog"
