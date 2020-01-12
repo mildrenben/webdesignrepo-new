@@ -23,10 +23,10 @@ collections:
           widget: "relation",
           collection: "category",
           valueField: "title",
-          searchFields: 'title',
-          displayFields: "title"
+          searchFields: "title",
+          displayFields: "title",
         }
-        - {
+      - {
           label: "Category",
           name: "category",
           widget: "relation",
