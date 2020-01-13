@@ -27,8 +27,8 @@ collections:
           displayFields: "title",
         }
       - {
-          label: "Category",
-          name: "category",
+          label: "Subcategory",
+          name: "subcategory",
           widget: "relation",
           collection: "category",
           valueField: "subcategory",
